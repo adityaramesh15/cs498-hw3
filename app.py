@@ -1,7 +1,5 @@
 from flask import Flask, request, jsonify
-from pymongo import MongoClient
-from pymongo.write_concern import WriteConcern
-from pymongo.read_preferences import ReadPreference
+from pymongo import MongoClient, WriteConcern, ReadPreference
 from dotenv import load_dotenv
 import os
 
