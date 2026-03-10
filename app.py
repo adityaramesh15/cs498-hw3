@@ -46,7 +46,7 @@ def count_tesla_primary():
 @app.route('/count-bmw-secondary', methods=['GET'])
 def count_bmw_secondary():
     """4. Eventually Consistent Analytical Read (Secondary Only)"""
-    secondary_collection = base_collection.with_options(read_preference=ReadPreference.SECONDARY)
+    secondary_collection = base_collection.with_options(read_preference=ReadPreference.SECONDARY_PREFERRED)
     count = secondary_collection.count_documents({"Make": "BMW"})
     
     return jsonify({"count": count}), 200
