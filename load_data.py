@@ -7,7 +7,7 @@ load_dotenv()
 mongo_username = os.getenv("MONGODB_ACCOUNT")
 mongo_password = os.getenv("MONGODB_ACCOUNT_PASS")
 
-MONGO_URI = f"mongodb+srv://adityaramesh15:{mongo_password}@cs498-hw3.s3qfsxq.mongodb.net/?appName=CS498-HW3"
+MONGO_URI = f"mongodb+srv://{mongo_username}:{mongo_password}@cs498-hw3.s3qfsxq.mongodb.net/?appName=CS498-HW3"
 client = MongoClient(MONGO_URI)
 
 db = client['ev_db']
